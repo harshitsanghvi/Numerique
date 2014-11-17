@@ -1,0 +1,39 @@
+body{
+	width:100%;
+	margin: 0 auto;
+
+}
+
+/***********************
+For hearder.php
+***********************/
+.header{
+	width: 100%;
+	margin: 0, auto;
+	background-color: #eee;
+	position: relative;
+	
+}
+.logo{
+	float: left;
+	width: 25%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.title{
+	width:50%;
+	margin: 0, auto;
+	text-align: center;
+
+}
+.searchbar{
+	width: 25%;
+	position: absolute;
+	top: 8px;
+	right: 0;
+
+}
+#searchform{
+
+}
