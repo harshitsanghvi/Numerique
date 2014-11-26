@@ -50,79 +50,32 @@
             <!-- /.navbar-collapse -->
         </div>
 
-<!-- IMAGE DISPLAY -->
+<!-- All the business cards -->
 
-        <div class="col-md-4">
-        <h4> User Image</h4>
-        <br>
-        
-                <?php
+        <!--<div class="col-md-4">-->
+        <div class="navigation-left" style="float:left">
+<ul>
+<li><a href="<?php echo $website_url; ?>">Business card 1</a></li>
+<li><a href="<?php echo $website_url; ?>">Business card 2</a></li>
+<li><a href="<?php echo $website_url; ?>">Business card 3</a></li>
+<li><a href="<?php echo $website_url; ?>">Business card 4</a></li>
+<li><a href="<?php echo $website_url; ?>">Business card 5</a></li>
+<li><a href="<?php echo $website_url; ?>">Business card 6</a></li>
 
-                //$name=$_POST['search'];
-                if($username != "" || $username != null)
+</ul>
+</div>
 
 
-                {
-                    $res = mysql_query("SELECT * FROM userimage where username like $username ");     
-                }
-                else
-                    $res = mysql_query("SELECT * FROM userimage");
+           <!-- </div>-->
 
-                if(!$res)
-                    echo mysql_error();
+            <!-- Image of that business -->
 
-                $num_rows = mysql_num_rows($res);
-                
-                if($num_rows > 0)
-                {
-
-                    while($row = mysql_fetch_array($res)){
-
-            ?>
-            <div class="col-md-4 img-portfolio">
+            <div class="col-md-6 img-portfolio">
                 <a href="portfolio-item.html">
-                    <?php 
-                        echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'" alt="logo" class="img-responsive img-hover">';
-                    ?>
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="portfolio-item.html"><?php echo $row['username']; ?></a>
+                    <a href="portfolio-item.html">Business Card Image</a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <?php
-                    }// Enf of while loop
-                }// End of if($row[0] > 0) loop
-
-                else
-                {
-            ?>
-            <div class="col-md-4 img-portfolio">
-                <h3>
-                    <a href="portfolio-item.html"><?php echo "Oops!! No user found!!"; ?></a>
-                </h3>
-            </div>
-            <?php
-                }
-            ?>
-            </div>
-
-            <!-- User Details with Edit Button -->
-
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Details</h4>
-                    </div>
-                    <div class="panel-body">
-                        <form id="registerform" action="includes/register.php" method="post">
-							<fieldset>
-    							
-    						</fieldset>
-                        	<br/><button id="regbtn" class="btn btn-primary">Edit</button>
-                        </form>
-                        <br/>
-                        <div id="regstatus"></div>
-                    </div>
-                </div>
+                <p> Note about this specific business card</p>
             </div>
